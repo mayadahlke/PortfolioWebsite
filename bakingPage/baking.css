@@ -1,0 +1,228 @@
+body {
+  margin: 0px; 
+  font-family: 'Neucha';
+}
+
+.cover {
+  margin: 0;
+}
+
+.coverimage {
+  position: relative;
+}
+
+.coverimage h1 {
+  z-index: 5;
+  font-size: 60px;
+  font-family: 'Montez';
+  margin: 0;
+  padding: 10px;
+  text-align: center; 
+  background-color: #2CCCC3; 
+  border-bottom: 3px solid #FACD3D;
+  position: relative;
+}
+
+.coverimage img {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.container {
+  position: relative;
+  display: inline;
+}
+
+.start {
+  position: absolute;
+  bottom: 1200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #181818d1;
+  color: white;
+  width: 20%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #E60576;
+  font-size: 25px;
+  font-family: 'Quicksand';
+  box-shadow: 0 2px 4px 0 black,0 2px 10px 0 black !important;
+}
+
+.start:hover {
+  background: #181818;
+  color: #5626C4;
+}
+
+.start:active {
+  bottom: 1100%;
+  width: 19%;
+}
+
+button:focus { 
+  outline: none; 
+}
+
+.background2 {
+  background-color: #FACD3D;
+  margin: 19px 50px;
+  border: 2px dashed #E60576;
+}
+
+.background1 {
+  background-image: url("./imgbk.jpg");
+  position: absolute;
+}
+
+.parent {
+  margin-bottom: 20px; 
+}
+
+.block {
+  height: 100%;
+  padding: 20px;
+}
+
+.directions {
+  border: 5px double #2CCCC3;
+  background-color: #ffffffe0;
+  padding: 10px; 
+  margin: 50px 40px;
+  font-size: 27px;
+  text-align: center;
+}
+
+button, .dropdown {
+  height: 65px;
+  border: 2px solid #5626C4;
+  background-color: white; 
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown {
+  width: 99.6%;
+  height: 600px;
+  display: none;
+  border-top: transparent; 
+  overflow: hidden;
+  overflow: scroll;
+}
+
+.title {
+  font-size: 30px;
+  margin: 10px;
+  font-family: 'Neucha';
+}
+
+img {
+  margin: 14px 29px;
+}
+
+#cupcakepic {
+  filter: brightness(145%);
+}
+
+#creampuffpic {
+  filter: brightness(90%);
+}
+
+.images {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.centering {
+  left: 14.5%;
+}
+
+.center {
+  left: 29.5%;
+}
+
+.pastry {
+  background-repeat: no-repeat;
+  background-size: 280px;
+  height: 185px;
+  width: 265px;
+  margin: 2%;
+}
+
+.image1 {
+  background-image: url("./pastry/cookie.jpg");
+}
+
+.image2 {
+  background-image: url("./pastry/pb.jpg");
+}
+
+.image3 {
+  background-image: url("./pastry/shortbread.JPG");
+}
+
+.image4 {
+  background-image: url("./pastry/cake.jpg");
+}
+
+.image5 {
+  background-image: url("./pastry/cupcake.jpg");
+}
+
+.image6 {
+  background-image: url("./pastry/cc.jpg");
+}
+
+.image7 {
+  background-image: url("./pastry/brownies.jpg");
+}
+
+.image8 {
+  background-image: url("./pastry/blondeb.JPG");
+}
+
+.image9 {
+  background-image: url("./pastry/brownies2.jpg");
+}
+
+.image10 {
+  background-image: url("./pastry/bbtm.jpg");
+}
+
+.image11 {
+  background-image: url("./pastry/ccm.jpg");
+}
+
+.image12 {
+  background-image: url("./pastry/creampuffs.jpg"); 
+}
+
+.txt {
+  position: relative;
+  top: 146px;
+  background: #000000ad;
+  width: 92%;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.maintxt {
+  margin: 10px 40px;
+  font-size: 25px;
+}
+
+hr {
+  border: 3px solid #FACD3D; 
+  margin: 0;
+}
+
+footer {
+  padding: 10px; 
+  text-align: center;
+  background: #2CCCC3;
+}
