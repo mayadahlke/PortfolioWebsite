@@ -1,0 +1,44 @@
+body {
+    font-family: 'Noto Serif';
+    background-color: #272727; /*#850808;*/
+    color: #dedede;
+    font-weight: 100;
+}
+
+#opbkgrd {
+    margin: 30px;
+    background-color: #ffffff17;
+    border-radius: 7px;
+}
+
+h1 {
+    font-family: 'Rye';
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+section {
+    overflow: hidden;
+    clear: both;
+    padding: 10px;
+}
+
+.text {
+    font-size: 20px;
+    float: left;
+    width: 40%;
+    display: inline-block;
+    margin: 70px 80px 50px 80px;
+}
+
+.video {
+    position: relative;
+    outline: none;
+    margin: 0px 40px;
+}
+
+footer {
+    text-align: center;
+}
