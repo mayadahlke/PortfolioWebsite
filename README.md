@@ -1,2 +1,5 @@
-# PortfolioWebsite
-This is my portfolio website. Go to http://www.maya-dahlke.com/ to take a look. 
+# Maya's Portfolio Website
+
+This is my portfolio website. 
+
+Go to [my website](http://www.maya-dahlke.com/) to take a look. 
