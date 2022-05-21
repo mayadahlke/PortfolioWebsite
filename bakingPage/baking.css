@@ -38,32 +38,31 @@ body {
 
 .start {
   position: absolute;
-  bottom: 1200%;
+  bottom: 10vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #181818d1;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   width: 20%;
   padding: 10px;
   border-radius: 20px;
   border: 2px solid #E60576;
   font-size: 25px;
-  font-family: 'Quicksand';
+  font-family: "Neucha";
   box-shadow: 0 2px 4px 0 black,0 2px 10px 0 black !important;
 }
 
 .start:hover {
-  background: #181818;
-  color: #5626C4;
-}
-
-.start:active {
-  bottom: 1100%;
-  width: 19%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 button:focus { 
   outline: none; 
+}
+
+a {
+  color:  #E60576;
+  text-decoration: none;
 }
 
 .background2 {
@@ -83,7 +82,7 @@ button:focus {
 
 .block {
   height: 100%;
-  padding: 20px;
+  padding: 20px 20px 0 20px
 }
 
 .directions {
@@ -115,7 +114,7 @@ button, .dropdown {
 .title {
   font-size: 30px;
   margin: 10px;
-  font-family: 'Neucha';
+  font-family: "Neucha";
 }
 
 img {
@@ -171,11 +170,11 @@ img {
 }
 
 .image5 {
-  background-image: url("./pastry/cupcake.jpg");
+  background-image: url("./pastry/reinedesaba.JPG");
 }
 
 .image6 {
-  background-image: url("./pastry/cc.jpg");
+  background-image: url("./pastry/cc.png");
 }
 
 .image7 {
@@ -187,15 +186,15 @@ img {
 }
 
 .image9 {
-  background-image: url("./pastry/brownies2.jpg");
-}
-
-.image10 {
   background-image: url("./pastry/bbtm.jpg");
 }
 
-.image11 {
+.image10 {
   background-image: url("./pastry/ccm.jpg");
+}
+
+.image11 {
+  background-image: url("./pastry/bbs.png"); 
 }
 
 .image12 {
@@ -206,7 +205,7 @@ img {
   position: relative;
   top: 146px;
   background: #000000ad;
-  width: 92%;
+  width: 92.4%;
   padding: 10px;
   font-size: 17px;
 }
