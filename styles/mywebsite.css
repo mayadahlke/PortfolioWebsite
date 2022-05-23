@@ -34,56 +34,91 @@ svg {
   z-index: 1000;
 }
 
-h1 {
-  text-align: center;
-  margin: 10px;
-  font-family: 'Dancing Script';
-  font-weight: 100;
-  font-size: 50px;
-  text-decoration: none;
-  color: black;
+#headerTextIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
 }
 
-.myName:hover {
+.myName {
+  font-family: 'Dancing Script';
+  font-size: 1.5rem;
   text-decoration: none;
   color: black;
 }
 
 #menu {
-  background-color: #f172a1; 
-  overflow: auto;
-  white-space: nowrap;
-  text-align: center;
-  width: 100%;
+  background-color: #f172a1;
   text-transform: uppercase;
   border: #e64398 1px solid;
+  display: flex;
+  justify-content: center;
 }
 
-#menu a {
+#menuDropdown {
+  display: none;
+  flex-direction: column;
+  background: #f172a1;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+}
+
+#menuDropdown > .navItem:first-of-type {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#menuDropdown > .navItem:last-of-type {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.navItem {
   color: white;
-  display: inline-block;
   text-align: center;
   padding: 0.9%;
-  width: 20%;
   text-decoration: none;
   letter-spacing: 0.2vw;
 }
 
-#menu a:hover {
+#menu .navItem {
+  width: 15%;
+}
+
+#menuDropdown .navItem {
+  padding: 0.5rem;
+}
+
+.navItem:hover {
   color: white;
   background-color: #e64398; 
 }
 
+#hamburgerMenu {
+  visibility: hidden;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 #hpt {
+  display: flex;
   position: relative;
   text-align: center;
-  background-color: #b39bc8; 
+  background-color: #b39bc8;
   height: 100%;
+  padding: 0px 5rem;
 }
+
 #hptb {
   position: absolute;
   left: 50%;
-  bottom: 0%;  
+  bottom: 0%;
+  transform: translate(-50%, 0%);
 }
 
 #hptb a {
@@ -114,28 +149,33 @@ h1 {
   align-items: center;
 }
 
-#welcomeText{
+#welcomeImg {
   flex: 1 1 0;
-  margin-right: 15px; 
-  border-radius: 10px;
-  padding: 20px;
-  text-align: left;
 }
 
-#welcomeImg{
-  flex: 1 1 0; 
-  margin-left: 15px;
+#welcomeText {
+  flex: 1 1 0;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+  font-family: 'Heebo';
+}
+
+#myWebsiteDrawing {
+  width: 500px;
+  padding-top: 8rem;
 }
 
 #welcomeTextOne {
   font-size: 60px;
-  font-family: 'Heebo';
   line-height: 65px;
   font-weight: 600;
+  padding-top: 15rem;
 }
 
 .welcomeTextTwo {
   font-size: 25px;
+  margin-top: 3rem;
 }
 
 h2 {
@@ -160,6 +200,8 @@ h2 {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0px 2rem;
 }
 
 .abone {
@@ -176,87 +218,42 @@ h2 {
   font-size: 20px;
 }
 
-.profilePic {
-  margin: 0 5vw 0 10vw;
-  border-radius: 20px;
-  box-shadow: 2px 4px 9px #968d9e;
+.amone {
+  margin: 0 5rem;
 }
 
-#btn{
+.profilePic {
+  margin: 0;
+  border-radius: 20px;
+  box-shadow: 2px 4px 9px #968d9e;
+  width: 300px;
+}
+
+#btn {
   position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 2.5rem;
+  padding-top: 0.5rem;
 }
 
 #btn a {
   text-decoration: none;
   border: 3px #af9bbf solid;
-  color:  #212529;
+  color: #212529;
   padding: 10px;
-  border-radius: 10px; 
-  text-align: center;
-  font-size: 18px;
-}
-
-#btn a.contactmebtn {
-  left: 230px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Staatliches';
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #btn a:hover {
    background-color: #af9bbf;
-}
-
-.resumedownload {
-  cursor: pointer;
-  margin: 5px;
-}
-
-.resumedownload span {
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.5s;
-}
-
-.resumedownload span:after {
-  content: '\2913';
-  opacity: 0;
-  top: 0;
-  right: -20px;
-}
-
-.resumedownload:hover span {
-  padding-right: 15px;
-}
-
-.resumedownload:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.contactmebtn {
-  cursor: pointer;
-  margin: 5px;
-  right: 20%;
-}
-
-.contactmebtn span {
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.5s;
-}
-
-.contactmebtn span:after {
-  content: '\226B';
-  opacity: 0;
-  top: 0;
-  right: -20px;
-}
-
-.contactmebtn:hover span {
-  padding-right: 15px;
-}
-
-.contactmebtn:hover span:after {
-  opacity: 1;
-  right: 0;
 }
 
 #skills {
@@ -266,12 +263,13 @@ h2 {
   height: 100%; 
   position: relative;
   align-items: center;
+  justify-content: center;
+  padding: 0px 2rem;
 }
 
 .skill {
   position: relative;
-  flex-grow: 1 1 0;
-  margin: 0 5vw 0 10vw; 
+  margin: 0 5vw;
 }
 
 .skill2 {
@@ -280,8 +278,6 @@ h2 {
   overflow-x: scroll;
   white-space: nowrap;
   display: inline-flex;
-  flex-grow: 1 1 0;
-  width: 50%;
 }
 
 #demo {
@@ -289,7 +285,6 @@ h2 {
   position: relative;
   max-width: 215px;
   min-width: 150px;
-  margin: 20px 80px 20px 0px;
   font-size: 1.2em;
   text-align: justify;
 }
@@ -319,6 +314,12 @@ h2 {
   margin: 2px 0px 2px 0px;
 }
 
+#projectsborder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #projects {
   position: relative;
   height: 100%;
@@ -336,7 +337,7 @@ h2 {
 #projectsul {
   width: 85%;
   height: 330px;
-  overflow: hidden;
+  overflow: scroll;
   white-space: nowrap;
   padding: 0;
 }
@@ -422,11 +423,7 @@ a.projlinkTwo:hover {
   border: none;
   font-size: 50px;
   font-family: 'Staatliches';
-}
-
-#leftbutton {
-  margin-left: 30px;
-  text-align: center;
+  cursor: pointer;
 }
 
 button:focus {
@@ -462,7 +459,6 @@ button:hover {
 
 #contactbar {
   display: flex;
-  height: 60px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -474,6 +470,9 @@ button:hover {
 
 .soc {
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
   margin: 15px;
   padding: 20px;
   border-radius: 20px;
@@ -527,5 +526,54 @@ hr {
 footer {
   margin: 10px;
   text-align: center;
+}
+
+@media only screen and (max-width: 925px) {
+  #myWebsiteDrawing {
+    width: 300px;
+  }
+
+  #welcomeTextOne {
+    font-size: 40px;
+    padding-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  #menu .navItem {
+    display: none;
+  }
+
+  #hamburgerMenu {
+    visibility: visible;
+  }
+
+  #hpt {
+    padding: 0px 2rem;
+  }
+
+  #welcomeImg {
+    display: none;
+  }
+
+  #welcomeText {
+    text-align: center;
+  }
+
+  #welcomeTextOne {
+    padding-top: 10rem;
+  }
+
+  .profilePic {
+    width: 150px;
+  }
+
+  .abbullet {
+    font-size: 16px;
+  }
+
+  .amone {
+    display: none;
+  }
 }
 

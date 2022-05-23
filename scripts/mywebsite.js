@@ -1,7 +1,13 @@
 
-//open popup with my phone number on it
+// open popup with my phone number on it
 function myFunction() {
   alert("My phone number is: 858-705-7691");
+}
+
+// open dropdown menu
+function navDropdownMenu() {
+  let dropdown = document.getElementById("menuDropdown");
+  dropdown.style.display = (dropdown.style.display == "flex") ? "none" : "flex";
 }
 
 // menu buttons
@@ -67,3 +73,4 @@ function sideScroll(element, direction, speed, distance, step) {
     }
   }, speed);
 }
+
