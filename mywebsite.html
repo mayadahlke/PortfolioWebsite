@@ -1,274 +1,425 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Maya's Website</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <style>
+            @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="UTF-8" />
-  <title>Maya's Website</title>
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet" />
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-  <link href="./styles/mywebsite.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
-  <script src="./scripts/mywebsite.js"></script>
-</head>
+            @media only screen and (max-width: 550px) {
+                nav {
+                    justify-content: center !important;
+                }
 
-<body>
-  <div id="header">
-    <div id="headerTextIcon">
-      <div></div>
-      <a href="#container" class="myName">
-        <h1 style="margin: 0.5rem;font-weight: 100;">Maya Dahlke</h1>
-      </a>
-      <i class="bi bi-list" id="hamburgerMenu" onclick="navDropdownMenu()"></i>
-      <div id="menuDropdown">
-        <a href="#aboutme" class="navItem">About Me</a>
-        <a href="#skills" class="navItem">Skills</a>
-        <a href="#projects" class="navItem">Projects</a>
-        <a href="#contactinfo" class="navItem">Contact Info</a>
-      </div>
-    </div>
-    <div id="menu">
-      <a href="#aboutme" class="navItem">About Me</a>
-      <a href="#skills" class="navItem">Skills</a>
-      <a href="#projects" class="navItem">Projects</a>
-      <a href="#contactinfo" class="navItem">Contact Info</a>
-    </div>
-  </div>
+                .homeContainer {
+                    padding-top: 100px !important;
+                }
 
-  <ul id="container">
-    <li class="section">
-      <div id="hpt">
-        <div id="welcomeImg">
-          <img src="./pictures/MyWebsiteDrawing1copy.png" id="myWebsiteDrawing" />
-        </div>
-        <div id="welcomeText">
-          <div id="welcomeTextOne">
-            Hello, and welcome to my webpage!
-          </div>
-          <div class="welcomeTextTwo">
-            Scroll down to learn about me and my computer science skills.
-          </div>
-        </div>
-        <div id="hptb">
-          <a href="#aboutme">
-            <i class="bi bi-chevron-compact-down"></i>
-          </a>
-        </div>
-      </div>
-    </li>
+                .boxProjects {
+                    height: 340px !important;
+                }
 
-    <li class="section">
-      <div id="aboutme">
-        <div class="amone">
-          <img src="./pictures/profile_pic.jpg" alt="Profile Picture" class="profilePic" />
-        </div>
-        <div class="amtwo">
-          <ul>
-            <h2 class="abtitle">About Me</h2>
-            <li class="abbullet"><b>From:</b> San Diego, California</li>
-            <li class="abbullet"><b>Education:</b> Loyola Marymount University in Los Angeles</li>
-            <li class="abbullet"><b>Actual Graduation Date:</b> May 2021</li>
-            <li class="abbullet"><b>Major:</b> Computer Science</li>
-            <li class="abbullet"><b>Minor:</b> Applied Mathematics</li>
-            <li class="abbullet"><b>Hobbies:</b> Coding, Drawing, Listening to music, Traveling, and Baking</li>
-          </ul>
-          <div id="btn">
-            <a href="./resume.pdf" target="_blank" download="Maya Dahlke's Resume">
-              <i class="bi bi-download"></i>
-              <span>Download Resume</span>
+                .aboutMeContents {
+                    flex-wrap: wrap;
+                }
+            }
+            body {
+                background-color: #F8F8F8;
+                margin: 0;
+                font-family: "Lato", serif;
+            }
+        
+            nav {
+                position: fixed;
+                width: calc(100% - 40px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #EAEAE0;
+                margin: 0 20px;
+                padding: 20px 0;
+                flex-wrap: wrap-reverse;
+                gap: 5px;
+            }
+
+            .menu {  
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                gap: 20px;
+                margin: 0;
+                padding: 0 20px;
+            }
+        
+            .menuList {
+                list-style: none;
+            }
+
+            .menuLinkDownload {
+                margin-left: 20px;
+                border: 2px solid #278AB0;
+                padding: 2px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: black;
+            }
+
+            .menuLinkDownload:hover {
+                background-color: #278AB0;
+                color: white;
+            }
+        
+            .menuLink {
+                color: black;
+                text-decoration: underline;
+                text-decoration-color: #278AB0;
+            }
+            
+            .menuLink:hover {
+                color: #278AB0;
+            }
+
+            .parentContainer {
+                display: flex;
+                flex-direction: column;
+                margin: 0 20px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-color: #EAEAE0;
+            }
+
+            .section {
+                padding: 0 20px;
+            }
+
+            .homeContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 0;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .name {
+                font-weight: 900;
+                color: #1C4670;
+            }
+
+            .aboutMeList {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            .aboutMeContents {
+                display: flex;
+                gap: 20px;
+            }
+
+            .boxContainerSkills {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+        
+            .boxSkills {
+                background-color: #e2e2d7;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 300px;
+                width: 200px;
+                padding: 10px;
+            }
+
+            .boxContainerProjects {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+        
+            .boxProjects {
+                background-color: #e2e2d7;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 300px;
+                width: 400px;
+                padding: 10px;
+            }
+
+            .projectHeader {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .projectItems {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .chip {
+                border: 1.5px solid #1C4670;
+                border-radius: 5px;
+                padding: 1px 5px;
+                color: #1C4670;
+                font-size: 12px;
+            }
+
+            .contacts {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 8px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <a href="./resume.pdf"
+               download="Maya Dahlke's Resume"
+               class="menuLinkDownload">
+                Download Resume
             </a>
-            <a href="#contactinfo">
-              <i class="bi bi-chat-right-text"></i>
-              <span>Contact Me</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </li>
+            <ul class="menu">
+                <li class="menuList">
+                    <a href="#" class="menuLink">Home</a>
+                </li>
+                <li class="menuList">
+                    <a href="#aboutMe" class="menuLink">About Me</a>
+                </li>
+                <li class="menuList">
+                    <a href="#skills" class="menuLink">Skills</a>
+                </li>
+                <li class="menuList">
+                    <a href="#projects" class="menuLink">Projects</a>
+                </li>
+            </ul>
+        </nav>
 
-    <li class="section">
-      <div id="skills">
-        <div class="skill">
-          <h2 class="stitle">Skills</h2>
-          <p id="demo">
-            At school I have covered Java extensively, and I am learning various data structure and algorithm concepts. I am excited about learning new web technologies on the side and continue growing my developer skills.
-          </p>
-        </div>
-        <div class="skill2">
-          <ul style="padding: 0px">
-            <li class="skillbox">
-              <i class="bi bi-file-earmark-text" style="font-size: 2rem;"></i>
-              <div class="skillboxText">
-                <p>Git</p>
-                <p>Eclipse</p>
-                <p>Xcode</p>
-                <p>Google App Engine</p>
-                <p>JIRA</p>
-                <p>Rational</p>
-              </div>
-            </li>
-            <li class="skillbox">
-              <i class="bi bi-gear" style="font-size: 2rem;"></i>
-              <div class="skillboxText">
-                <p>Java</p>
-                <p>Python</p>
-                <p>Haskell</p>
-                <p>C</p>
-                <p>Assembly</p>
-              </div>
-            </li>
-            <li class="skillbox">
-              <i class="bi bi-brush" style="font-size: 2rem;"></i>
-              <div class="skillboxText">
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-                <p>React</p>
-                <p>C++</p>
-                <p>Swift</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </li>
-
-    <li class="section">
-      <div id="projects">
-        <h2 id="projs">Projects</h2>
-        <div id="projectsborder">
-          <button id="leftbutton" class="inline round" type="button">
-            &lt;
-          </button>
-          <ul id="projectsul" class="inline">
-            <li class="proj" style="margin-left: 15px">
-              <p class="projname">
-                <a href="movieFinderAppPage/movieFinderAppPage.html" target="_blank" class="projlink">MovieFinder
-                  App</a>
-              </p>
-              <p class="projtext">MovieFinder is an iOS app I created in my Interaction Design class at LMU. For this project, I used Swift and Xcode to design the app, and used three API calls to gather information. Click the title above to check out and learn more about the app.<br /><br /></p>
-              <hr class="line" />
-              <span class="projskill">Swift</span><span class="projskill">Xcode</span><span class="projskill">GitHub</span>
-            </li>
-
-            <li class="proj">
-              <p class="projname">
-                <a href="https://github.com/mealmate-ai/mealmate-cmsi402" target="_blank" class="projlink">Daily Bites</a>
-              </p>
-              <p class="projtext">Daily Bites is my senior capstone project, which I designed and developed with four teammates. I was primarily responsible for the recipe recommendation engine, the chat interface. We collaborated on the definition and implementation of the DB schema and service APIs. Also, check out my code in Node.js --> <a href="https://github.com/mdalhlke/recipeRecommendation" target="_blank" class="projlinkTwo">GitHub</a></p>
-              <hr class="line" />
-              <span class="projskill">Python Flask</span><span class="projskill">SwiftUI</span><span class="projskill">RASA</span><span class="projskill">AWS</span><span class="projskill">GitHub</span>
-            </li>
-
-            <li class="proj">
-              <p class="projname">
-                <a href="https://github.com/breelynbetts/HYPER" target="_blank" class="projlink">Hyper!</a>
-              </p>
-              <p class="projtext">Hyper! is an exhilarating and quirky programming language designed for those who want to express their limitless amount of energy. I collaborated with two other LMU students to devise a language that employs speech-like syntax for an easier, more natural experience. Click here to vist Hyper!'s website --> <a href="https://breelynbetts.github.io/HYPER" target="_blank" class="projlinkTwo">WEBSITE!</a>
-              </p>
-              <hr class="line" />
-              <span class="projskill">Ohm</span><span class="projskill">Javascript</span><span
-                class="projskill">Hyper!</span>
-            </li>
-
-            <li class="proj">
-              <p class="projname">
-                <a href="https://github.com/mdalhlke/hobyn" target="_blank" class="projlink">Hobyn</a>
-              </p>
-              <p class="projtext">Are you bored? Do you need a new hobby? Just use Hobyn! Hobyn is a website that matches a person to a hobby that is right for them. All you have to do is take the survey. In this project, I worked with two other students. My job was to work on the Google APIs, but I also contributed to some of the HTML and CSS. Click on the title to see the webpage.
-              </p>
-              <hr class="line" />
-              <span class="projskill">CSS</span><span class="projskill">HTML</span><span
-                class="projskill">JavaScript</span><span class="projskill">GitHub</span><span class="projskill">Google
-                App Engine</span>
-            </li>
-
-            <li class="proj">
-              <p class="projname">
-                <a href="bakingPage/baking.html" target="_blank" class="projlink">Baker's Workshop</a>
-              </p>
-              <p class="projtext">Speaking of hobbies, one of my favorite hobbies is baking. So, I made this webpage as a project to show you. On this webpage, you will find drop-downs of different kinds of pastries. Each drop-down includes some pictures of things I have baked, a short description of that pastry, a baking tip, and a fun fact. Click on the title to see the webpage.
-              </p>
-              <hr class="line" />
-              <span class="projskill">CSS</span><span class="projskill">HTML</span><span
-                class="projskill">JavaScript</span>
-            </li>
-
-            <li class="proj">
-              <p class="projname">
-                <a href="myArtPortfolioPage/myArtPortfolio.html" target="_blank" class="projlink">Art Portfolio</a>
-              </p>
-              <p class="projtext">This link will take you to a website filled with pictures of my artwork. I created these pieces in the art classes I took at LMU. And, yes, drawing is another one of my hobbies. However, in this portfolio, you will see different mediums of art, such as drypoint and collagraph. Click on the title to see the webpage.<br />
-              </p>
-              <hr class="line" />
-              <span class="projskill">CSS</span><span class="projskill">HTML</span><span
-                class="projskill">JavaScript</span>
-            </li>
-          </ul>
-          <button id="rightbutton" class="inline round" type="button">
-            &gt;
-          </button>
-        </div>
-      </div>
-    </li>
-
-    <li class="section">
-      <div id="contactinfo">
-        <h2 id="contacttitle">Contact Information</h2>
-        <div id="contactbar">
-          <div class="socBlock">
-            <div class="soc" onclick="myFunction()">
-              <i class="bi bi-telephone" style="font-size: 2rem;"></i>
-              <p class="contactText">Call Me</p>
+        <div class="parentContainer">
+            <div id="home" class="homeContainer section">
+                <h1>Hello 👋</h1>
+                <span style="text-align: center;">
+                    <h1>My name is <span class="name">Maya Dahlke</span>, and I am a software engineer.</h1>
+                </span>
+                <div class="contacts">
+                    <a href="https://www.linkedin.com/in/mayadahlke/" class="menuLink">
+                        <i class="bi bi-linkedin" style="font-size: 25px;"></i>
+                    </a>
+                    <a href="https://github.com/mdalhlke" class="menuLink">
+                        <i class="bi bi-github" style="font-size: 25px;"></i>
+                    </a>
+                    <a href="mailto:mdahlke123@gmail.com" class="menuLink">
+                        <i class="bi bi-envelope-fill" style="font-size: 25px;"></i>
+                    </a>
+                </div>
             </div>
-          </div>
 
-          <div class="socBlock">
-            <a href="mailto:mdahlke123@gmail.com" target="_blank" class="socmedLink">
-              <div class="soc">
-                <i class="bi bi-envelope" style="font-size: 2rem;"></i>
-                <p class="contactText">E-mail</p>
-              </div>
-            </a>
-          </div>
+            <div id="aboutMe" class="aboutMeContainer section">
+                <h2>About Me</h2>
+                <div class="aboutMeContents">
+                    <img src="./pictures/profile_pic.jpg" 
+                         alt="My profile picture."
+                         height="250"
+                         width="187.5"
+                         style="border-radius: 5px;"
+                    />
+                    <div class="aboutMeList">
+                        <div>
+                            I have a deep interest in software design and development, and I enjoy building applications.
+                            It combines my passion for logical problem solving and aesthetic user interfaces and experiences.
+                            I love learning new technologies and using them in projects to see how they support interface design, 
+                            ease of development, and clean, efficient code.
+                        </div>
 
-          <div class="socBlock">
-            <a href="https://github.com/mdalhlke" target="_blank" class="socmedLink">
-              <div class="soc">
-                <i class="bi bi-github" style="font-size: 2rem;"></i>
-                <p class="contactText">GitHub</p>
-              </div>
-            </a>
-          </div>
+                        <div style="display: flex; align-items: flex-start; gap: 10px;">
+                            <div>☀️</div>
+                            <div>
+                                I am from San Diego, California.
+                            </div>
+                        </div>
 
-          <div class="socBlock">
-            <a href="https://www.linkedin.com/in/mayadahlke/" target="_blank" class="socmedLink">
-              <div class="soc">
-                <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
-                <p class="contactText">Linkedin</p>
-              </div>
-            </a>
-          </div>
+                        <div style="display: flex; align-items: flex-start; gap: 10px;">
+                            <div>🎓</div>
+                            <div>
+                                I graduated from Loyola Marymount University in Los Angeles, California in May 2021 
+                                with a Bachelor of Science in computer science and a minor in applied mathematics.
+                            </div>
+                        </div>
 
-          <div class="socBlock">
-            <a href="https://www.facebook.com/maya.dahlke.9" target="_blank" class="socmedLink">
-              <div class="soc">
-                <i class="bi bi-facebook" style="font-size: 2rem;"></i>
-                <p class="contactText">Facebook</p>
-              </div>
-            </a>
-          </div>
+                        <div style="display: flex; align-items: flex-start; gap: 10px;">
+                            <div>🎨</div>
+                            <div>
+                                Besides coding, my hobbies include baking, creating art, playing the guitar or piano, and traveling.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skills" class="skillsContainer section">
+                <h2 style="margin-top: 40px;">Skills</h2>
+                <p>
+                    I am excited about learning new web technologies through work and on my own, so I will continue to 
+                    grow as a developer. During my time in school, I covered Java extensively and learned various data 
+                    structure and algorithm concepts. Below, I have listed some of the skills I have acquired through my 
+                    years at school and beyond.
+                </p>
+                <div class="boxContainerSkills">
+                    <div class="boxSkills">
+                        <i class="bi bi-file-earmark-fill" style="font-size: 20px;"></i>
+                        <span>Google Cloud Platform</span>
+                        <span>Amazon Web Services</span>
+                        <span>JIRA</span>
+                        <span>Git</span>
+                        <span>Eclipse</span>
+                        <span>Xcode</span>
+                    </div>
+                    <div class="boxSkills">
+                        <i class="bi bi-gear-fill" style="font-size: 20px;"></i>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>Java</span>
+                        <span>PostgreSQL</span>
+                        <span>C</span>
+                        <span>Assembly</span>
+                    </div>
+                    <div class="boxSkills">
+                        <i class="bi bi-brush-fill" style="font-size: 20px;"></i>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Angular.JS</span>
+                        <span>React.JS</span>
+                        <span>D3.JS</span>
+                        <span>Swift/SwiftUI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="projectsContainer section">
+                <h2 style="margin-top: 40px;">Projects</h2>
+                <div class="boxContainerProjects">
+                    <div class="boxProjects">
+                        <div class="projectHeader">
+                            <a href="movieFinderAppPage/movieFinderAppPage.html" class="menuLink projectTitle">MovieFinder App</a>
+                            <p>
+                                MovieFinder is an iOS app I created in my Interaction Design class at LMU. For this project, 
+                                I used Swift and Xcode to design the app, and used three API calls to gather information. 
+                                Click the title above to check out and learn more about the app.
+                            </p>
+                        </div>
+                        <div class="projectItems">
+                            <span class="chip">Swift</span>
+                            <span class="chip">Xcode</span>
+                            <span class="chip">GitHub</span>
+                        </div>
+                    </div>
+                    <div class="boxProjects">
+                        <div class="projectHeader">
+                            <a href="https://github.com/mealmate-ai/mealmate-cmsi402" class="menuLink projectTitle">Daily Bites</a>
+                            <p>
+                                Daily Bites is my senior capstone project, which I designed and developed with four teammates. 
+                                I was primarily responsible for the recipe recommendation engine, the chat interface. 
+                                We collaborated on the definition and implementation of the DB schema and service APIs.
+                                Also, check out my code in Node.js <i class="bi bi-arrow-right"></i> 
+                                <a href="https://github.com/mdalhlke/recipeRecommendation" class="menuLink">GitHub</a>
+                            </p>
+                        </div>
+                        <div class="projectItems">
+                            <span class="chip">Python Flask</span>
+                            <span class="chip">SwiftUI</span>
+                            <span class="chip">RASA</span>
+                            <span class="chip">AWS</span>
+                            <span class="chip">GitHub</span>
+                        </div>
+                    </div>
+                    <div class="boxProjects">
+                        <div class="projectHeader">
+                            <a href="https://github.com/breelynbetts/HYPER" class="menuLink projectTitle">HYPER!</a>
+                            <p>
+                                Hyper! is an exhilarating and quirky programming language designed for those who want to express 
+                                their limitless amount of energy. I collaborated with two other LMU students to devise a language 
+                                that employs speech-like syntax for an easier, more natural experience. Click here to vist Hyper!'s 
+                                website <i class="bi bi-arrow-right"></i> 
+                                <a href="https://breelynbetts.github.io/HYPER" class="menuLink">WEBSITE!</a>
+                            </p>
+                        </div>
+                        <div class="projectItems">
+                            <span class="chip">Ohm</span>
+                            <span class="chip">Javascript</span>
+                            <span class="chip">Hyper!</span>
+                        </div>
+                    </div>
+                    <div class="boxProjects">
+                        <div class="projectHeader">
+                            <a href="https://github.com/mdalhlke/hobyn" class="menuLink projectTitle">Hobyn</a>
+                            <p>
+                                Are you bored? Do you need a new hobby? Just use Hobyn! Hobyn is a website that matches a person to a 
+                                hobby that is right for them. All you have to do is take the survey. In this project, I worked with two 
+                                other students. My job was to work on the Google APIs, but I also contributed to some of the HTML and CSS. 
+                                Click on the title to see the webpage.
+                            </p>
+                        </div>
+                        <div class="projectItems">
+                            <span class="chip">CSS</span>
+                            <span class="chip">HTML</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">GitHub</span>
+                            <span class="chip">Google App Engine</span>
+                        </div>
+                    </div>
+                    <div class="boxProjects">
+                        <div class="projectHeader">
+                            <a href="myArtPortfolioPage/myArtPortfolio.html" class="menuLink projectTitle">Art Portfolio</a>
+                            <p>
+                                This link will take you to a website filled with pictures of my artwork. I created these pieces in the art 
+                                classes I took at LMU. And, yes, drawing is another one of my hobbies. However, in this portfolio, you will see 
+                                different mediums of art, such as drypoint and collagraph. Click on the title to see the webpage.
+                            </p>
+                        </div>
+                        <div class="projectItems">
+                            <span class="chip">CSS</span>
+                            <span class="chip">HTML</span>
+                            <span class="chip">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="boxProjects">
+                        <div class="projectHeader">
+                            <a href="bakingPage/baking.html" class="menuLink projectTitle">Baker's Workshop</a>
+                            <p>
+                                Speaking of hobbies, one of my favorite hobbies is baking. So, I made this webpage as a project to show you.
+                                On this webpage, you will find drop-downs of different kinds of pastries. Each drop-down includes some pictures 
+                                of things I have baked, a short description of that pastry, a baking tip, and a fun fact. Click on the title to 
+                                see the webpage.
+                            </p>
+                        </div>
+                        <div class="projectItems">
+                            <span class="chip">CSS</span>
+                            <span class="chip">HTML</span>
+                            <span class="chip">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </li>
-  </ul>
-  <hr />
-  <footer>Maya Dahlke &copy; 2020. All Rights Reserved.</footer>
-</body>
-
+    </body>
 </html>
