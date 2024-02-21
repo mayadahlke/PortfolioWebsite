@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -12,14 +12,16 @@
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <link rel="stylesheet" type="text/css" href="mywebsite.css"/>
+        <script src="mywebsite.js"></script>
     </head>
 
     <body>
         <nav>
             <a href="./resume.pdf"
                download="Maya Dahlke's Resume"
-               class="menuLinkDownload">
+               class="button menuLinkDownload">
                 Download Resume
             </a>
             <div class="flexCenter">
@@ -37,9 +39,8 @@
                         <a href="#projects" class="menuLink">Projects</a>
                     </li>
                 </ul>
-                <div>
-                    <i class="bi bi-moon" style="font-size: 20px;"></i>
-                    <i class="bi bi-sun" style="font-size: 20px;"></i>
+                <div id="colorModeButton" class="button modeButton">
+                    <i class="bi bi-moon-fill"></i>
                 </div>
             </div>
         </nav>
@@ -96,7 +97,7 @@
                         <div class="bullets">
                             <div>🎓</div>
                             <div>
-                                I graduated from Loyola Marymount University in Los Angeles, California in May 2021 
+                                I graduated from Loyola Marymount University (LMU) in Los Angeles, California in May 2021 
                                 with a Bachelor of Science in computer science and a minor in applied mathematics.
                             </div>
                         </div>
@@ -152,105 +153,173 @@
 
             <div id="projects" class="projectsContainer section">
                 <h3 class="title">Projects</h3>
+                <p>
+                    Below is a list of the projects I have worked on, and the list is forever growing. These 
+                    projects are a mix of personal and academic projects done individually or with a group. Each 
+                    block includes a brief description and image of the project, and the technologies used. You can
+                    also click the title of the project, which will link you to it's GitHub repo or an external
+                    website that showcases the project.
+                </p>
                 <div class="boxContainerProjects">
                     <div class="boxItem boxProjects">
                         <div class="projectHeader">
-                            <a href="movieFinderAppPage/movieFinderAppPage.html" class="menuLink projectTitle">MovieFinder App</a>
-                            <p>
-                                MovieFinder is an iOS app I created in my Interaction Design class at LMU. For this project, 
-                                I used Swift and Xcode to design the app, and used three API calls to gather information. 
-                                Click the title above to check out and learn more about the app.
-                            </p>
-                        </div>
-                        <div class="projectItems">
-                            <span class="chip">Swift</span>
-                            <span class="chip">Xcode</span>
-                            <span class="chip">GitHub</span>
-                        </div>
-                    </div>
-                    <div class="boxItem boxProjects">
-                        <div class="projectHeader">
-                            <a href="https://github.com/mealmate-ai/mealmate-cmsi402" class="menuLink projectTitle">Daily Bites</a>
-                            <p>
-                                Daily Bites is my senior capstone project, which I designed and developed with four teammates. 
-                                I was primarily responsible for the recipe recommendation engine, the chat interface. 
-                                We collaborated on the definition and implementation of the DB schema and service APIs.
-                                Also, check out my code in Node.js <i class="bi bi-arrow-right"></i> 
-                                <a href="https://github.com/mdalhlke/recipeRecommendation" class="menuLink">GitHub</a>
-                            </p>
-                        </div>
-                        <div class="projectItems">
-                            <span class="chip">Python Flask</span>
-                            <span class="chip">SwiftUI</span>
-                            <span class="chip">RASA</span>
-                            <span class="chip">AWS</span>
-                            <span class="chip">GitHub</span>
+                            <div class="projectImgs">
+                                <img src="./pictures/movie-finder.png"
+                                        alt="MovieFinder App Page 1."
+                                        height="210px"
+                                        width="148px"
+                                >
+                                <img src="./pictures/movie-finder-2.png"
+                                        alt="MovieFinder App Page 2."
+                                        height="210px"
+                                        width="148px"
+                                >
+                            </div>
+                            <div class="projectBody">
+                                <div class="projectText">
+                                    <a href="movieFinderAppPage/movieFinderAppPage.html" class="menuLink projectTitle">MovieFinder App</a>
+                                    <p>
+                                        MovieFinder is an iOS app I created in my Interaction Design class at LMU. For this project, 
+                                        I used Swift and Xcode to design the app, and used three API calls to gather information. 
+                                        Click the title above to check out and learn more about the app.
+                                    </p>
+                                </div>
+                                <div class="projectItems">
+                                    <span class="chip">Swift</span>
+                                    <span class="chip">Xcode</span>
+                                    <span class="chip">GitHub</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="boxItem boxProjects">
                         <div class="projectHeader">
-                            <a href="https://github.com/breelynbetts/HYPER" class="menuLink projectTitle">HYPER!</a>
-                            <p>
-                                Hyper! is an exhilarating and quirky programming language designed for those who want to express 
-                                their limitless amount of energy. I collaborated with two other LMU students to devise a language 
-                                that employs speech-like syntax for an easier, more natural experience. Click here to vist Hyper!'s 
-                                website <i class="bi bi-arrow-right"></i> 
-                                <a href="https://breelynbetts.github.io/HYPER" class="menuLink">WEBSITE!</a>
-                            </p>
-                        </div>
-                        <div class="projectItems">
-                            <span class="chip">Ohm</span>
-                            <span class="chip">Javascript</span>
-                            <span class="chip">Hyper!</span>
-                        </div>
-                    </div>
-                    <div class="boxItem boxProjects">
-                        <div class="projectHeader">
-                            <a href="https://github.com/mdalhlke/hobyn" class="menuLink projectTitle">Hobyn</a>
-                            <p>
-                                Are you bored? Do you need a new hobby? Just use Hobyn! Hobyn is a website that matches a person to a 
-                                hobby that is right for them. All you have to do is take the survey. In this project, I worked with two 
-                                other students. My job was to work on the Google APIs, but I also contributed to some of the HTML and CSS. 
-                                Click on the title to see the webpage.
-                            </p>
-                        </div>
-                        <div class="projectItems">
-                            <span class="chip">CSS</span>
-                            <span class="chip">HTML</span>
-                            <span class="chip">JavaScript</span>
-                            <span class="chip">GitHub</span>
-                            <span class="chip">Google App Engine</span>
+                            <img src="./pictures/daily-bites.png"
+                                alt="Daily Bites Poster."
+                                height="205px"
+                                width="300px"
+                            >
+                            <div class="projectBody">
+                                <div class="projectText">
+                                    <a href="https://github.com/mealmate-ai/mealmate-cmsi402" class="menuLink projectTitle">Daily Bites</a>
+                                    <p>
+                                        Daily Bites is my senior capstone project, which I designed and developed with four teammates. 
+                                        I was primarily responsible for the recipe recommendation engine, the chat interface. 
+                                        We collaborated on the definition and implementation of the DB schema and service APIs.
+                                        Also, check out my code in Node.js <i class="bi bi-arrow-right"></i> 
+                                        <a href="https://github.com/mdalhlke/recipeRecommendation" class="menuLink">GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="projectItems">
+                                    <span class="chip">Python Flask</span>
+                                    <span class="chip">SwiftUI</span>
+                                    <span class="chip">RASA</span>
+                                    <span class="chip">AWS</span>
+                                    <span class="chip">GitHub</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="boxItem boxProjects">
                         <div class="projectHeader">
-                            <a href="myArtPortfolioPage/myArtPortfolio.html" class="menuLink projectTitle">Art Portfolio</a>
-                            <p>
-                                This link will take you to a website filled with pictures of my artwork. I created these pieces in the art 
-                                classes I took at LMU. And, yes, drawing is another one of my hobbies. However, in this portfolio, you will see 
-                                different mediums of art, such as drypoint and collagraph. Click on the title to see the webpage.
-                            </p>
-                        </div>
-                        <div class="projectItems">
-                            <span class="chip">CSS</span>
-                            <span class="chip">HTML</span>
-                            <span class="chip">JavaScript</span>
+                            <img src="./pictures/hyper.png"
+                                 alt="HYPER! Code."
+                                 height="173px"
+                                 width="300px"
+                            >
+                            <div class="projectBody">
+                                <div class="projectText">
+                                    <a href="https://github.com/breelynbetts/HYPER" class="menuLink projectTitle">HYPER!</a>
+                                    <p>
+                                        Hyper! is an exhilarating and quirky programming language designed for those who want to express 
+                                        their limitless amount of energy. I collaborated with two other LMU students to devise a language 
+                                        that employs speech-like syntax for an easier, more natural experience. Click here to vist Hyper!'s 
+                                        website <i class="bi bi-arrow-right"></i> 
+                                        <a href="https://breelynbetts.github.io/HYPER" class="menuLink">WEBSITE!</a>
+                                    </p>
+                                </div>
+                                <div class="projectItems">
+                                    <span class="chip">Ohm</span>
+                                    <span class="chip">Javascript</span>
+                                    <span class="chip">Hyper!</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="boxItem boxProjects">
                         <div class="projectHeader">
-                            <a href="bakingPage/baking.html" class="menuLink projectTitle">Baker's Workshop</a>
-                            <p>
-                                Speaking of hobbies, one of my favorite hobbies is baking. So, I made this webpage as a project to show you.
-                                On this webpage, you will find drop-downs of different kinds of pastries. Each drop-down includes some pictures 
-                                of things I have baked, a short description of that pastry, a baking tip, and a fun fact. Click on the title to 
-                                see the webpage.
-                            </p>
+                            <img src="./pictures/drypoint.jpeg"
+                                    alt="Drypoint Image of a dog."
+                                    height="239px"
+                                    width="300px"
+                            >
+                            <div class="projectBody">
+                                <div class="projectText">
+                                    <a href="myArtPortfolioPage/myArtPortfolio.html" class="menuLink projectTitle">Art Portfolio</a>
+                                    <p>
+                                        This link will take you to a website filled with pictures of my artwork. I created these pieces in the art 
+                                        classes I took at LMU. And, yes, drawing is another one of my hobbies. However, in this portfolio, you will see 
+                                        different mediums of art, such as drypoint and collagraph. Click on the title to see the webpage.
+                                    </p>
+                                </div>
+                                <div class="projectItems">
+                                    <span class="chip">CSS</span>
+                                    <span class="chip">HTML</span>
+                                    <span class="chip">JavaScript</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="projectItems">
-                            <span class="chip">CSS</span>
-                            <span class="chip">HTML</span>
-                            <span class="chip">JavaScript</span>
+                    </div>
+                    <div class="boxItem boxProjects">
+                       <div class="projectHeader">
+                            <img src="./pictures/bbtm.jpg"
+                                alt="Baker's Workshop Image - Muffins."
+                                height="225px"
+                                width="300px"
+                            >
+                            <div class="projectBody">
+                                <div class="projectText">
+                                    <a href="bakingPage/baking.html" class="menuLink projectTitle">Baker's Workshop</a>
+                                    <p>
+                                        Speaking of hobbies, one of my favorite hobbies is baking. So, I made this webpage as a project to show you.
+                                        On this webpage, you will find drop-downs of different kinds of pastries. Each drop-down includes some pictures 
+                                        of things I have baked, a short description of that pastry, a baking tip, and a fun fact. Click on the title to 
+                                        see the webpage.
+                                    </p>
+                                </div>
+                                <div class="projectItems">
+                                    <span class="chip">CSS</span>
+                                    <span class="chip">HTML</span>
+                                    <span class="chip">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxItem boxProjects">
+                        <div class="projectHeader">
+                            <img src="./pictures/hobyn.png"
+                                    alt="Hobyn Image."
+                                    height="168px"
+                                    width="300px"
+                            >
+                            <div class="projectBody">
+                                <div class="projectText">
+                                    <a href="https://github.com/mdalhlke/hobyn" class="menuLink projectTitle">Hobyn</a>
+                                    <p>
+                                        Are you bored? Do you need a new hobby? Just use Hobyn! Hobyn is a website that matches a person to a 
+                                        hobby that is right for them. All you have to do is take the survey. In this project, I worked with two 
+                                        other students. My job was to work on the Google APIs, but I also contributed to some of the HTML and CSS. 
+                                        Click on the title to see the webpage.
+                                    </p>
+                                </div>
+                                <div class="projectItems">
+                                    <span class="chip">CSS</span>
+                                    <span class="chip">HTML</span>
+                                    <span class="chip">JavaScript</span>
+                                    <span class="chip">GitHub</span>
+                                    <span class="chip">Google App Engine</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
