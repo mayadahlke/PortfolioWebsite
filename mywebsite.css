@@ -54,6 +54,10 @@ nav {
     gap: 5px;
 }
 
+p {
+    margin-bottom: 20px;
+}
+
 .flexGapForty {
     display: flex;
     gap: 40px;
