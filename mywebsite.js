@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+    // Color Mode
     const colorModeSaved = localStorage.getItem("colorMode");
     const colorModeButton = document.getElementById("colorModeButton");
 
@@ -27,6 +28,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
             localStorage.setItem("colorMode", "light");
             classes.remove("bi-sun-fill");
             classes.add("bi-moon-fill");
+        }
+    });
+
+    // Hamburger Menu
+    const menuListButton = document.getElementById("menuListButton");
+    const hamburgerMenu = document.querySelector(".hamburgerMenu");
+
+    menuListButton.addEventListener("click", () => {
+        hamburgerMenu.classList.toggle("visible");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!menuListButton.contains(event.target)) {
+            hamburgerMenu.classList.remove("visible");
         }
     });
 });

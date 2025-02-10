@@ -25,7 +25,7 @@
                 Download Resume
             </a>
             <div class="flexCenter">
-                <ul class="menu">
+                <ul id="standardMenu" class="menu">
                     <li class="menuList">
                         <a href="#" class="menuLink">Home</a>
                     </li>
@@ -39,6 +39,27 @@
                         <a href="#projects" class="menuLink">Projects</a>
                     </li>
                 </ul>
+
+                <div id="smallMenu" style="padding: 0 20px;">
+                    <div id="menuListButton">
+                        <i class="bi bi-list" style="font-size: 25px; cursor: pointer;"></i>
+                    </div>
+                    <ul class="hamburgerMenu">
+                        <li class="menuList hamburgerMenuList">
+                            <a href="#" class="hamburgerMenuLink">Home</a>
+                        </li>
+                        <li class="menuList hamburgerMenuList">
+                            <a href="#aboutMe" class="hamburgerMenuLink">About Me</a>
+                        </li>
+                        <li class="menuList hamburgerMenuList">
+                            <a href="#skills" class="hamburgerMenuLink">Skills</a>
+                        </li>
+                        <li class="menuList hamburgerMenuList">
+                            <a href="#projects" class="hamburgerMenuLink">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+
                 <div id="colorModeButton" class="button modeButton">
                     <i class="bi bi-moon-fill"></i>
                 </div>
@@ -72,7 +93,7 @@
 
             <div id="aboutMe" class="aboutMeContainer section">
                 <h3 class="title">About Me</h3>
-                <div class="flexGapForty">
+                <div class="aboutMeDetails">
                     <img src="./pictures/profile_pic.jpg" 
                          alt="My profile picture."
                          height="250"
@@ -105,7 +126,7 @@
                         <div class="bullets">
                             <div>🎨</div>
                             <div>
-                                Besides coding, my hobbies include baking, creating art, playing the guitar or piano, and traveling.
+                                Besides coding, my hobbies include baking, creating art, playing the guitar, reading, and traveling.
                             </div>
                         </div>
                     </div>
@@ -198,7 +219,7 @@
                                 <div class="projectText">
                                     <a href="https://github.com/mayadahlke/node-todo-list" class="menuLink projectTitle">To-Do List</a>
                                     <p>
-                                        This to-do list is a simple, fun personal project I developed using Node.js and EJS.
+                                        This to-do list is a simple, fun personal project I developed using Node.js and Embedded Javascript (EJS).
                                         To view code or try it out, click the title to navigate to the GitHub repository. 
                                         There, you can clone and run the command listed on the README to start the server. 
                                     </p>
